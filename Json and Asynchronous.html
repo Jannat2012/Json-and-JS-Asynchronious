@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>JavaScript </title>
+
+</head>
+
+<body>
+<p id="result"></p>
+<p id="demo1"></p>
+<p id="result2"></p>
+<script>
+var myObj={name:"Miftahul", age: 12, grade:7};
+var myJSON=JSON.stingify(myObj);//converts objects to JSON for sending data//
+var newObj= JSON.parse(myJSON);//converts JSON into object while recieving data//
+document.getElementById("result").innerHTML=newObj.name;
+
+//JS promises//
+function myDisplayer(some) {
+	document.getElementById("demo1").innerHTML.some;
+}
+function sum(x,y) {
+	var sum = x+y;
+	myDisplayer(sum);
+}
+let myPromise = new Promise(function(myResolve,myReject) {
+ //Producing code
+	let a=20;
+	if(a=20){
+		myResolve("Ok");
+	}else{
+		myReject("Error");
+	}
+});
+ 
+ //Consuming code
+mypromise.then(
+	function(value) {sum(10,10);},
+	function(error) {sum(error);}
+	);
+
+//---async/await in JS---//
+ async function add(a,b) {
+ 	let response = await a+b;
+ 	display(response);
+ }
+ function display(some){
+ 	document.getElementById("result2").innerHTML=some;
+ }
+ add(10,30);
+</script>
+
+</body>
+
+</html>
